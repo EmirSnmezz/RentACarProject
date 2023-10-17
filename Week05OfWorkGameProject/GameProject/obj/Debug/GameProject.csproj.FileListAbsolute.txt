@@ -1,0 +1,7 @@
+C:\Users\emirc\source\repos\Engin Demiroğ Youtube\GameProject\bin\Debug\GameProject.exe.config
+C:\Users\emirc\source\repos\Engin Demiroğ Youtube\GameProject\bin\Debug\GameProject.exe
+C:\Users\emirc\source\repos\Engin Demiroğ Youtube\GameProject\bin\Debug\GameProject.pdb
+C:\Users\emirc\source\repos\Engin Demiroğ Youtube\GameProject\obj\Debug\GameProject.csproj.AssemblyReference.cache
+C:\Users\emirc\source\repos\Engin Demiroğ Youtube\GameProject\obj\Debug\GameProject.csproj.CoreCompileInputs.cache
+C:\Users\emirc\source\repos\Engin Demiroğ Youtube\GameProject\obj\Debug\GameProject.exe
+C:\Users\emirc\source\repos\Engin Demiroğ Youtube\GameProject\obj\Debug\GameProject.pdb
