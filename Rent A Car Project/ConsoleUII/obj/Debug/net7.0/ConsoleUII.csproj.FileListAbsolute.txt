@@ -1,0 +1,22 @@
+C:\Users\emirc\source\repos\ReCapProject\ConsoleUII\bin\Debug\net7.0\ConsoleUII.exe
+C:\Users\emirc\source\repos\ReCapProject\ConsoleUII\bin\Debug\net7.0\ConsoleUII.deps.json
+C:\Users\emirc\source\repos\ReCapProject\ConsoleUII\bin\Debug\net7.0\ConsoleUII.runtimeconfig.json
+C:\Users\emirc\source\repos\ReCapProject\ConsoleUII\bin\Debug\net7.0\ConsoleUII.dll
+C:\Users\emirc\source\repos\ReCapProject\ConsoleUII\bin\Debug\net7.0\ConsoleUII.pdb
+C:\Users\emirc\source\repos\ReCapProject\ConsoleUII\bin\Debug\net7.0\Business.dll
+C:\Users\emirc\source\repos\ReCapProject\ConsoleUII\bin\Debug\net7.0\Data Access.dll
+C:\Users\emirc\source\repos\ReCapProject\ConsoleUII\bin\Debug\net7.0\Entities.dll
+C:\Users\emirc\source\repos\ReCapProject\ConsoleUII\bin\Debug\net7.0\Business.pdb
+C:\Users\emirc\source\repos\ReCapProject\ConsoleUII\bin\Debug\net7.0\Data Access.pdb
+C:\Users\emirc\source\repos\ReCapProject\ConsoleUII\bin\Debug\net7.0\Entities.pdb
+C:\Users\emirc\source\repos\ReCapProject\ConsoleUII\obj\Debug\net7.0\ConsoleUII.csproj.AssemblyReference.cache
+C:\Users\emirc\source\repos\ReCapProject\ConsoleUII\obj\Debug\net7.0\ConsoleUII.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\emirc\source\repos\ReCapProject\ConsoleUII\obj\Debug\net7.0\ConsoleUII.AssemblyInfoInputs.cache
+C:\Users\emirc\source\repos\ReCapProject\ConsoleUII\obj\Debug\net7.0\ConsoleUII.AssemblyInfo.cs
+C:\Users\emirc\source\repos\ReCapProject\ConsoleUII\obj\Debug\net7.0\ConsoleUII.csproj.CoreCompileInputs.cache
+C:\Users\emirc\source\repos\ReCapProject\ConsoleUII\obj\Debug\net7.0\ConsoleUII.csproj.CopyComplete
+C:\Users\emirc\source\repos\ReCapProject\ConsoleUII\obj\Debug\net7.0\ConsoleUII.dll
+C:\Users\emirc\source\repos\ReCapProject\ConsoleUII\obj\Debug\net7.0\refint\ConsoleUII.dll
+C:\Users\emirc\source\repos\ReCapProject\ConsoleUII\obj\Debug\net7.0\ConsoleUII.pdb
+C:\Users\emirc\source\repos\ReCapProject\ConsoleUII\obj\Debug\net7.0\ConsoleUII.genruntimeconfig.cache
+C:\Users\emirc\source\repos\ReCapProject\ConsoleUII\obj\Debug\net7.0\ref\ConsoleUII.dll

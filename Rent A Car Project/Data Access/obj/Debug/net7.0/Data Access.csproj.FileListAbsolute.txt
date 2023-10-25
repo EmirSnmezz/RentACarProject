@@ -1,0 +1,15 @@
+C:\Users\emirc\source\repos\ReCapProject\Data Access\bin\Debug\net7.0\Data Access.deps.json
+C:\Users\emirc\source\repos\ReCapProject\Data Access\bin\Debug\net7.0\Data Access.dll
+C:\Users\emirc\source\repos\ReCapProject\Data Access\bin\Debug\net7.0\Data Access.pdb
+C:\Users\emirc\source\repos\ReCapProject\Data Access\bin\Debug\net7.0\Entities.dll
+C:\Users\emirc\source\repos\ReCapProject\Data Access\bin\Debug\net7.0\Entities.pdb
+C:\Users\emirc\source\repos\ReCapProject\Data Access\obj\Debug\net7.0\Data Access.csproj.AssemblyReference.cache
+C:\Users\emirc\source\repos\ReCapProject\Data Access\obj\Debug\net7.0\Data Access.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\emirc\source\repos\ReCapProject\Data Access\obj\Debug\net7.0\Data Access.AssemblyInfoInputs.cache
+C:\Users\emirc\source\repos\ReCapProject\Data Access\obj\Debug\net7.0\Data Access.AssemblyInfo.cs
+C:\Users\emirc\source\repos\ReCapProject\Data Access\obj\Debug\net7.0\Data Access.csproj.CoreCompileInputs.cache
+C:\Users\emirc\source\repos\ReCapProject\Data Access\obj\Debug\net7.0\Data Access.csproj.CopyComplete
+C:\Users\emirc\source\repos\ReCapProject\Data Access\obj\Debug\net7.0\Data Access.dll
+C:\Users\emirc\source\repos\ReCapProject\Data Access\obj\Debug\net7.0\refint\Data Access.dll
+C:\Users\emirc\source\repos\ReCapProject\Data Access\obj\Debug\net7.0\Data Access.pdb
+C:\Users\emirc\source\repos\ReCapProject\Data Access\obj\Debug\net7.0\ref\Data Access.dll
