@@ -9,3 +9,14 @@ C:\Users\emirc\source\repos\ReCapProject\Entities\obj\Debug\net7.0\Entities.dll
 C:\Users\emirc\source\repos\ReCapProject\Entities\obj\Debug\net7.0\refint\Entities.dll
 C:\Users\emirc\source\repos\ReCapProject\Entities\obj\Debug\net7.0\Entities.pdb
 C:\Users\emirc\source\repos\ReCapProject\Entities\obj\Debug\net7.0\ref\Entities.dll
+C:\Users\emirc\source\repos\Rent A Car Recap Project\Rent A Car Project\Entities\bin\Debug\net7.0\Entities.deps.json
+C:\Users\emirc\source\repos\Rent A Car Recap Project\Rent A Car Project\Entities\bin\Debug\net7.0\Entities.dll
+C:\Users\emirc\source\repos\Rent A Car Recap Project\Rent A Car Project\Entities\bin\Debug\net7.0\Entities.pdb
+C:\Users\emirc\source\repos\Rent A Car Recap Project\Rent A Car Project\Entities\obj\Debug\net7.0\Entities.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\emirc\source\repos\Rent A Car Recap Project\Rent A Car Project\Entities\obj\Debug\net7.0\Entities.AssemblyInfoInputs.cache
+C:\Users\emirc\source\repos\Rent A Car Recap Project\Rent A Car Project\Entities\obj\Debug\net7.0\Entities.AssemblyInfo.cs
+C:\Users\emirc\source\repos\Rent A Car Recap Project\Rent A Car Project\Entities\obj\Debug\net7.0\Entities.csproj.CoreCompileInputs.cache
+C:\Users\emirc\source\repos\Rent A Car Recap Project\Rent A Car Project\Entities\obj\Debug\net7.0\Entities.dll
+C:\Users\emirc\source\repos\Rent A Car Recap Project\Rent A Car Project\Entities\obj\Debug\net7.0\refint\Entities.dll
+C:\Users\emirc\source\repos\Rent A Car Recap Project\Rent A Car Project\Entities\obj\Debug\net7.0\Entities.pdb
+C:\Users\emirc\source\repos\Rent A Car Recap Project\Rent A Car Project\Entities\obj\Debug\net7.0\ref\Entities.dll

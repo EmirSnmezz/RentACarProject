@@ -7,13 +7,9 @@ using System.Threading.Tasks;
 
 namespace Data_Access.Abstarct
 {
-    public interface ICarDal
+    public interface ICarDal : IEntityRepository <Car>
     {
-        int GetByID(Car car);
-        List<Car> GetAll();
-        void Add(Car car);
-        Car Update(Car car);
-        void Delete(Car car);
-
+        List <Car> GetByBranId (int brandId);
+        List<Car> GetByColorId (int ColorId);
     }
 }

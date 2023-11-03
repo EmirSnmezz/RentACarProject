@@ -3,12 +3,13 @@ using Entities.Concrete;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace Data_Access.Concrete.InMemory
 {
-    public class InMemoryColorDal:IColorDal
+    public class InMemoryColorDal : IColorDal
     {
         List<Color> colors;
 
@@ -16,16 +17,16 @@ namespace Data_Access.Concrete.InMemory
         {
             colors = new List<Color>
             {
-                new Color{ID = 1, ColorName = "Beyaz"},
-                new Color{ID = 2, ColorName = "Siyah"},
-                new Color{ID = 3, ColorName = "Kırmızı"},
-                new Color{ID = 4, ColorName = "Mavi"},
-                new Color{ID = 5, ColorName = "Kahverengi"},
-                new Color{ID = 6, ColorName = "Sedefli Beyaz"},
-                new Color{ID = 7, ColorName = "Mat Siyah"},
-                new Color{ID = 8, ColorName = "Lacivert"},
-                new Color{ID = 9, ColorName = "Turuncu"},
-                new Color{ID = 10, ColorName = "Gri"}
+                new Color{Id = 1, ColorName = "Beyaz"},
+                new Color{Id = 2, ColorName = "Siyah"},
+                new Color{Id = 3, ColorName = "Kırmızı"},
+                new Color{Id = 4, ColorName = "Mavi"},
+                new Color{Id = 5, ColorName = "Kahverengi"},
+                new Color{Id = 6, ColorName = "Sedefli Beyaz"},
+                new Color{Id = 7, ColorName = "Mat Siyah"},
+                new Color{Id = 8, ColorName = "Lacivert"},
+                new Color{Id = 9, ColorName = "Turuncu"},
+                new Color{Id = 10, ColorName = "Gri"}
             };
         }
 
@@ -36,7 +37,7 @@ namespace Data_Access.Concrete.InMemory
 
         public void Delete(Color color)
         {
-            Color colorOfDelete = colors.SingleOrDefault(c => c.ID == color.ID);
+            Color colorOfDelete = colors.SingleOrDefault(c => c.Id == color.Id);
 
             if (colorOfDelete != null) colors.Remove(colorOfDelete);
         }
@@ -46,25 +47,35 @@ namespace Data_Access.Concrete.InMemory
             return colors;
         }
 
+        public List<Color> GetAll(Expression<Func<Color, bool>> filter = null)
+        {
+            throw new NotImplementedException();
+        }
+
         public int GetByID(Color color)
         {
-            Color colorOfGetById = colors.SingleOrDefault(c => c.ID == color.ID);
+            Color colorOfGetById = colors.SingleOrDefault(c => c.Id == color.Id);
             
-            int ColorID = colorOfGetById.ID;
+            int ColorID = colorOfGetById.Id;
            
             return ColorID;
         }
 
         public Color Update(Color color)
         {
-            Color colorOfDefault = colors.SingleOrDefault(c => c.ID == color.ID);
+            Color colorOfDefault = colors.SingleOrDefault(c => c.Id == color.Id);
            
-            colorOfDefault.ID = color.ID;
+            colorOfDefault.Id = color.Id;
 
             colorOfDefault.ColorName = color.ColorName;
 
             return colorOfDefault;
 
+        }
+
+        void IEntityRepository<Color>.Update(Color entity)
+        {
+            throw new NotImplementedException();
         }
     }
 }

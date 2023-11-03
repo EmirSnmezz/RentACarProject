@@ -3,6 +3,7 @@ using Entities.Concrete;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -16,17 +17,17 @@ namespace Data_Access.Concrete.InMemory
         {
             _cars = new List<Car>
             {
-                new Car {ID = 1 ,BranID = 1 , ColorID = 1 , ModelYear = 2023 , DailyPrice = 795000, Description = "Fiat Egea Cross"},
+                new Car {ID = 1 ,BrandId = 1 , ColorId = 1 , ModelYear = 2023 , DailyPrice = 795000, Description = "Fiat Egea Cross"},
                
-                new Car {ID = 2 ,BranID = 2 , ColorID = 3 , ModelYear = 2023 , DailyPrice = 1050000, Description = "Toyota Corolla"},
+                new Car {ID = 2 ,BrandId = 2 , ColorId = 3 , ModelYear = 2023 , DailyPrice = 1050000, Description = "Toyota Corolla"},
                
-                new Car {ID = 3 ,BranID = 3 , ColorID = 5 , ModelYear = 2023 , DailyPrice = 1795000, Description = "Skoda Superb"},
+                new Car {ID = 3 ,BrandId = 3 , ColorId = 5 , ModelYear = 2023 , DailyPrice = 1795000, Description = "Skoda Superb"},
                
-                new Car {ID = 4 ,BranID = 4 , ColorID = 1 , ModelYear = 2023 , DailyPrice = 2995000, Description = "BMW 4 Series 430i"},
+                new Car {ID = 4 ,BrandId = 4 , ColorId = 1 , ModelYear = 2023 , DailyPrice = 2995000, Description = "BMW 4 Series 430i"},
                
-                new Car {ID = 5 ,BranID = 5 , ColorID = 1 , ModelYear = 2023 , DailyPrice = 3000000, Description = "Audi A5 Coupe"},
+                new Car {ID = 5 ,BrandId = 5 , ColorId = 1 , ModelYear = 2023 , DailyPrice = 3000000, Description = "Audi A5 Coupe"},
                
-                new Car {ID = 6 ,BranID = 5 , ColorID = 1 , ModelYear = 2023 , DailyPrice = 7950000, Description = "Audi A8 Long"},
+                new Car {ID = 6 ,BrandId = 5 , ColorId = 1 , ModelYear = 2023 , DailyPrice = 7950000, Description = "Audi A8 Long"},
             };
         }
         public void Add(Car car)
@@ -46,6 +47,21 @@ namespace Data_Access.Concrete.InMemory
             return _cars;
         }
 
+        public List<Car> GetAll(Expression<Func<Car, bool>> filter = null)
+        {
+            throw new NotImplementedException();
+        }
+
+        public List<Car> GetByBranId(int brandId)
+        {
+            throw new NotImplementedException();
+        }
+
+        public List<Car> GetByColorId(int ColorId)
+        {
+            throw new NotImplementedException();
+        }
+
         public int GetByID(Car car)
         {
             Car myCar = _cars.SingleOrDefault(c => c.ID == car.ID);
@@ -60,15 +76,20 @@ namespace Data_Access.Concrete.InMemory
            
             myCar.ID = car.ID;
            
-            myCar.BranID = car.BranID;
+            myCar.BrandId = car.BrandId;
            
-            myCar.ColorID = car.ColorID;
+            myCar.ColorId = car.ColorId;
            
             myCar.DailyPrice = car.DailyPrice;
            
             myCar.Description = car.Description;
             
             return myCar;
+        }
+
+        void IEntityRepository<Car>.Update(Car entity)
+        {
+            throw new NotImplementedException();
         }
     }
 }

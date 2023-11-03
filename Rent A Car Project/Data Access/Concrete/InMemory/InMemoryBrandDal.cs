@@ -3,6 +3,7 @@ using Entities.Concrete;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -16,11 +17,11 @@ namespace Data_Access.Concrete.InMemory
         {
             brands = new List<Brand>
             {
-                new Brand{ID = 1 , BrandName = "Fiat"},
-                new Brand{ID = 2 , BrandName = "Toyota"},
-                new Brand{ID = 3 , BrandName = "Skoda"},
-                new Brand{ID = 4 , BrandName = "BMW"},
-                new Brand{ID = 5 , BrandName = "AUDİ"}
+                new Brand{Id = 1 , BrandName = "Fiat"},
+                new Brand{Id = 2 , BrandName = "Toyota"},
+                new Brand{Id = 3 , BrandName = "Skoda"},
+                new Brand{Id = 4 , BrandName = "BMW"},
+                new Brand{Id = 5 , BrandName = "AUDİ"}
             };
         }
         public void Add(Brand brand)
@@ -30,35 +31,41 @@ namespace Data_Access.Concrete.InMemory
 
         public void Delete(Brand brand)
         {
-            Brand brandOfDelete = brands.SingleOrDefault(b => b.ID == brand.ID);
+            Brand brandOfDelete = brands.SingleOrDefault(b => b.Id == brand.Id);
             
             brands.Remove(brandOfDelete);
         }
 
-        public List<Brand> GetAll()
+
+        public List<Brand> GetAll(Expression<Func<Brand, bool>> filter = null)
         {
             return brands;
         }
 
-        public int GetByID(Brand brand)
+        public int GetById(Brand brand)
         {
-            int brandID;
-            Brand brandOfGetID = brands.SingleOrDefault(b=> b.ID == brand.ID);
+            int brandId;
+            Brand brandOfGetID = brands.SingleOrDefault(b=> b.Id == brand.Id);
 
-            brandID = brandOfGetID.ID;
+            brandId = brandOfGetID.Id;
 
-            return brandID;
+            return brandId;
         }
 
         public Brand Update(Brand brand)
         {
-            Brand brandOfUpdate = brands.SingleOrDefault(b=> b.ID == brand.ID);
+            Brand brandOfUpdate = brands.SingleOrDefault(b=> b.Id == brand.Id);
 
-            brandOfUpdate.ID = brand.ID;
+            brandOfUpdate.Id = brand.Id;
 
             brandOfUpdate.BrandName = brand.BrandName;
 
             return brandOfUpdate;
+        }
+
+        void IEntityRepository<Brand>.Update(Brand entity)
+        {
+            throw new NotImplementedException();
         }
     }
 }

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\emirc\\source\\repos\\ReCapProjectWEEK07WORK2\\Business\\Business.csproj": {}
+    "C:\\Users\\emirc\\source\\repos\\Rent A Car Recap Project\\Rent A Car Project\\Business\\Business.csproj": {}
   },
   "projects": {
-    "C:\\Users\\emirc\\source\\repos\\ReCapProjectWEEK07WORK2\\Business\\Business.csproj": {
+    "C:\\Users\\emirc\\source\\repos\\Rent A Car Recap Project\\Rent A Car Project\\Business\\Business.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\emirc\\source\\repos\\ReCapProjectWEEK07WORK2\\Business\\Business.csproj",
+        "projectUniqueName": "C:\\Users\\emirc\\source\\repos\\Rent A Car Recap Project\\Rent A Car Project\\Business\\Business.csproj",
         "projectName": "Business",
-        "projectPath": "C:\\Users\\emirc\\source\\repos\\ReCapProjectWEEK07WORK2\\Business\\Business.csproj",
+        "projectPath": "C:\\Users\\emirc\\source\\repos\\Rent A Car Recap Project\\Rent A Car Project\\Business\\Business.csproj",
         "packagesPath": "C:\\Users\\emirc\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\emirc\\source\\repos\\ReCapProjectWEEK07WORK2\\Business\\obj\\",
+        "outputPath": "C:\\Users\\emirc\\source\\repos\\Rent A Car Recap Project\\Rent A Car Project\\Business\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -33,11 +33,11 @@
           "net7.0": {
             "targetAlias": "net7.0",
             "projectReferences": {
-              "C:\\Users\\emirc\\source\\repos\\ReCapProjectWEEK07WORK2\\Data Access\\Data Access.csproj": {
-                "projectPath": "C:\\Users\\emirc\\source\\repos\\ReCapProjectWEEK07WORK2\\Data Access\\Data Access.csproj"
+              "C:\\Users\\emirc\\source\\repos\\Rent A Car Recap Project\\Rent A Car Project\\Data Access\\Data Access.csproj": {
+                "projectPath": "C:\\Users\\emirc\\source\\repos\\Rent A Car Recap Project\\Rent A Car Project\\Data Access\\Data Access.csproj"
               },
-              "C:\\Users\\emirc\\source\\repos\\ReCapProjectWEEK07WORK2\\Entities\\Entities.csproj": {
-                "projectPath": "C:\\Users\\emirc\\source\\repos\\ReCapProjectWEEK07WORK2\\Entities\\Entities.csproj"
+              "C:\\Users\\emirc\\source\\repos\\Rent A Car Recap Project\\Rent A Car Project\\Entities\\Entities.csproj": {
+                "projectPath": "C:\\Users\\emirc\\source\\repos\\Rent A Car Recap Project\\Rent A Car Project\\Entities\\Entities.csproj"
               }
             }
           }
@@ -67,18 +67,18 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.402\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.403\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\emirc\\source\\repos\\ReCapProjectWEEK07WORK2\\Data Access\\Data Access.csproj": {
+    "C:\\Users\\emirc\\source\\repos\\Rent A Car Recap Project\\Rent A Car Project\\Data Access\\Data Access.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\emirc\\source\\repos\\ReCapProjectWEEK07WORK2\\Data Access\\Data Access.csproj",
+        "projectUniqueName": "C:\\Users\\emirc\\source\\repos\\Rent A Car Recap Project\\Rent A Car Project\\Data Access\\Data Access.csproj",
         "projectName": "Data Access",
-        "projectPath": "C:\\Users\\emirc\\source\\repos\\ReCapProjectWEEK07WORK2\\Data Access\\Data Access.csproj",
+        "projectPath": "C:\\Users\\emirc\\source\\repos\\Rent A Car Recap Project\\Rent A Car Project\\Data Access\\Data Access.csproj",
         "packagesPath": "C:\\Users\\emirc\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\emirc\\source\\repos\\ReCapProjectWEEK07WORK2\\Data Access\\obj\\",
+        "outputPath": "C:\\Users\\emirc\\source\\repos\\Rent A Car Recap Project\\Rent A Car Project\\Data Access\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -100,8 +100,8 @@
           "net7.0": {
             "targetAlias": "net7.0",
             "projectReferences": {
-              "C:\\Users\\emirc\\source\\repos\\ReCapProjectWEEK07WORK2\\Entities\\Entities.csproj": {
-                "projectPath": "C:\\Users\\emirc\\source\\repos\\ReCapProjectWEEK07WORK2\\Entities\\Entities.csproj"
+              "C:\\Users\\emirc\\source\\repos\\Rent A Car Recap Project\\Rent A Car Project\\Entities\\Entities.csproj": {
+                "projectPath": "C:\\Users\\emirc\\source\\repos\\Rent A Car Recap Project\\Rent A Car Project\\Entities\\Entities.csproj"
               }
             }
           }
@@ -115,6 +115,12 @@
       "frameworks": {
         "net7.0": {
           "targetAlias": "net7.0",
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[7.0.13, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
@@ -131,18 +137,18 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.402\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.403\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\emirc\\source\\repos\\ReCapProjectWEEK07WORK2\\Entities\\Entities.csproj": {
+    "C:\\Users\\emirc\\source\\repos\\Rent A Car Recap Project\\Rent A Car Project\\Entities\\Entities.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\emirc\\source\\repos\\ReCapProjectWEEK07WORK2\\Entities\\Entities.csproj",
+        "projectUniqueName": "C:\\Users\\emirc\\source\\repos\\Rent A Car Recap Project\\Rent A Car Project\\Entities\\Entities.csproj",
         "projectName": "Entities",
-        "projectPath": "C:\\Users\\emirc\\source\\repos\\ReCapProjectWEEK07WORK2\\Entities\\Entities.csproj",
+        "projectPath": "C:\\Users\\emirc\\source\\repos\\Rent A Car Recap Project\\Rent A Car Project\\Entities\\Entities.csproj",
         "packagesPath": "C:\\Users\\emirc\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\emirc\\source\\repos\\ReCapProjectWEEK07WORK2\\Entities\\obj\\",
+        "outputPath": "C:\\Users\\emirc\\source\\repos\\Rent A Car Recap Project\\Rent A Car Project\\Entities\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -191,7 +197,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.402\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.403\\RuntimeIdentifierGraph.json"
         }
       }
     }
