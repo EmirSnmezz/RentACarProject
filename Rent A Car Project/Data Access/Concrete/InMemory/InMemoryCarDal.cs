@@ -1,4 +1,5 @@
-﻿using Data_Access.Abstarct;
+﻿using Core.DataAccess;
+using Data_Access.Abstarct;
 using Entities.Concrete;
 using System;
 using System.Collections.Generic;
@@ -35,6 +36,11 @@ namespace Data_Access.Concrete.InMemory
             _cars.Add(car);
         }
 
+        public List<CarDetailDto> CarDetail()
+        {
+            throw new NotImplementedException();
+        }
+
         public void Delete(Car car)
         {
             Car myCar = _cars.SingleOrDefault(c => c.ID == car.ID);
@@ -48,6 +54,11 @@ namespace Data_Access.Concrete.InMemory
         }
 
         public List<Car> GetAll(Expression<Func<Car, bool>> filter = null)
+        {
+            throw new NotImplementedException();
+        }
+
+        public List<Car> GetByBrandId(int brandId)
         {
             throw new NotImplementedException();
         }

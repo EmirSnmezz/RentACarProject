@@ -3,6 +3,7 @@ using Data_Access.Abstarct;
 using Data_Access.Concrete.Entity_Framework;
 using Data_Access.Concrete.InMemory;
 using Entities.Concrete;
+using Microsoft.IdentityModel.Tokens;
 
 namespace ConsoleUII
 {
@@ -41,11 +42,45 @@ namespace ConsoleUII
 
             CarManager carManager = new CarManager(new efCarDal(_context));
 
-            carManager.Add(new Car { ID = 1, BrandId = 1, ColorId = 1, DailyPrice = 3, Description = "2", ModelYear = 2023 });
+            //carManager.Add(new Car {ID = 3 , BrandId = 2, ColorId = 3, DailyPrice = 3000, Description = "BMW 5.30 i 245 HP RWD ", ModelYear = 2023 });
 
-            carManager.GetAll();
+            //foreach( var car in carManager.GetAll())
+            //{
+            //    Console.WriteLine
+            //        (
+            //        "****************************Araç Bilgileri***********************\n" +
+            //        "Araç ID : {0}\n"+
+            //        "Renk ID: {1}\n"+
+            //        "Marka ID: {2}\n"+
+            //        "Model Yılı {3}\n"+
+            //        "Günlük Kira : {4}\n"+
+            //        "Araç Bilgileri {5}" , 
+            //        car.ID,
+            //        car.ColorId,
+            //        car.BrandId,
+            //        car.ModelYear,
+            //        car.DailyPrice,
+            //        car.Description
+            //        );
+            //}
 
-
+            Console.WriteLine("******************************************* FİRMAYA AİT ARAÇ BİLGİLERİ ****************************************** ");
+            foreach (var car in carManager.CarDetail())
+            {
+                Console.WriteLine
+                    ("--------------------------------" +
+                    "\nAraç Adı :{0}\n" +
+                    "Araç Rengi :{1}\n" +
+                    "Araç Markası :{2}\n" +
+                    "Araç Günlük Ücreti :{3}\n" +
+                    "--------------------------------", 
+                    car.CarName, 
+                    car.ColorName,
+                    car.BrandName, 
+                    car.DailyPrice
+                    );
+          
+            }
 
 
 

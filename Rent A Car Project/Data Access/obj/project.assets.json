@@ -961,9 +961,25 @@
           }
         }
       },
+      "Core/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v7.0",
+        "dependencies": {
+          "Microsoft.EntityFrameworkCore.SqlServer": "7.0.13"
+        },
+        "compile": {
+          "bin/placeholder/Core.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Core.dll": {}
+        }
+      },
       "Entities/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v7.0",
+        "dependencies": {
+          "Core": "1.0.0"
+        },
         "compile": {
           "bin/placeholder/Entities.dll": {}
         },
@@ -2620,6 +2636,11 @@
         "useSharedDesignerContext.txt"
       ]
     },
+    "Core/1.0.0": {
+      "type": "project",
+      "path": "../Core/Core.csproj",
+      "msbuildProject": "../Core/Core.csproj"
+    },
     "Entities/1.0.0": {
       "type": "project",
       "path": "../Entities/Entities.csproj",
@@ -2628,6 +2649,7 @@
   },
   "projectFileDependencyGroups": {
     "net7.0": [
+      "Core >= 1.0.0",
       "Entities >= 1.0.0",
       "Microsoft.EntityFrameworkCore.SqlServer >= 7.0.13"
     ]
@@ -2665,6 +2687,9 @@
         "net7.0": {
           "targetAlias": "net7.0",
           "projectReferences": {
+            "C:\\Users\\emirc\\source\\repos\\Rent A Car Recap Project\\Rent A Car Project\\Core\\Core.csproj": {
+              "projectPath": "C:\\Users\\emirc\\source\\repos\\Rent A Car Recap Project\\Rent A Car Project\\Core\\Core.csproj"
+            },
             "C:\\Users\\emirc\\source\\repos\\Rent A Car Recap Project\\Rent A Car Project\\Entities\\Entities.csproj": {
               "projectPath": "C:\\Users\\emirc\\source\\repos\\Rent A Car Recap Project\\Rent A Car Project\\Entities\\Entities.csproj"
             }

@@ -1,4 +1,5 @@
-﻿using Entities.Concrete;
+﻿using Core.DataAccess;
+using Entities.Concrete;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,7 +10,8 @@ namespace Data_Access.Abstarct
 {
     public interface ICarDal : IEntityRepository <Car>
     {
-        List <Car> GetByBranId (int brandId);
+        List <Car> GetByBrandId (int brandId);
         List<Car> GetByColorId (int ColorId);
+        List<CarDetailDto> CarDetail();
     }
 }

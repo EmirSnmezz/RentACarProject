@@ -1,6 +1,8 @@
-﻿using Data_Access.Abstarct;
+﻿using Core.Entity_Framework;
+using Data_Access.Abstarct;
 using Entities.Concrete;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Metadata;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,62 +12,38 @@ using System.Threading.Tasks;
 
 namespace Data_Access.Concrete.Entity_Framework
 {
-    public class efCarDal : ICarDal
+    public class efCarDal : EfEntityRepositoryBase<Car, RentACarContext>, ICarDal  //EntityRepositoryBase generic sınıfından inherit aldığımız için ICarDal interface'ini implement ettiğimiz zaman                                                                               otomatikman inteface'in gerekliliği olan methodlar aldığımız inherit sayesinde otomatikman classımızın içinde içi                                                                                doldurulmuş bir şekilde base classtan gelmektedir
     {
         RentACarContext _context;
-
-        public efCarDal(RentACarContext context)
+        public efCarDal(RentACarContext context) :base (context)
         {
             _context = context;
         }
-        public void Add(Car entity)
+
+        public List<CarDetailDto> CarDetail()
         {
-            using (_context)
-            {
-               
-                var addedEntity = _context.Entry( entity );
-                addedEntity.State = EntityState.Added;
-                _context.SaveChanges();
+            var result = from c in _context.Car
+                        join b in _context.Brand
+                        on c.BrandId equals b.Id
+                        join cl in _context.Color
+                        on c.ColorId equals cl.Id                       
+                        select new CarDetailDto { CarName = c.Description, BrandName = b.BrandName, ColorName = cl.ColorName, DailyPrice = c.DailyPrice };
+
+            return result.ToList();
+                        
+                       
             }
-        }
 
-        public void Delete(Car entity)
+        public List<Car> GetByBrandId(int brandId)
         {
-            using (_context)
-            {
-                var deletedEntity = _context.Entry(entity);
-                deletedEntity.State = EntityState.Deleted;
-                _context.SaveChanges();
-            }
-        }
-
-        public Car Get(Expression<Func<Car, bool>> filter)
-        {
-            return _context.Set<Car>().SingleOrDefault(filter);
-        }
-
-        public List<Car> GetAll(Expression <Func<Car,bool>> filter = null)
-        {
-            
-                return filter==null ? _context.Set<Car>().ToList() : _context.Set<Car>().Where(filter).ToList();
-            
-        }
-
-        public List<Car> GetByBranId(int BrandId)
-        {
-            return _context.Set<Car>().Where(p => p.BrandId == BrandId).ToList();
+            var getByBrandId = _context.Car.Where(p => p.BrandId == brandId).ToList();
+            return getByBrandId;
         }
 
         public List<Car> GetByColorId(int ColorId)
         {
-            return _context.Set<Car>().Where(p => p.ColorId == ColorId).ToList();
-        }
-
-        public void Update(Car entity)
-        {
-            var updatedEntity = _context.Entry( entity );
-            updatedEntity.State = EntityState.Modified;
-            _context.SaveChanges ();
+            var getByColorId = _context.Car.Where(p => p.ColorId == ColorId).ToList();
+            return getByColorId;
         }
     }
 }
