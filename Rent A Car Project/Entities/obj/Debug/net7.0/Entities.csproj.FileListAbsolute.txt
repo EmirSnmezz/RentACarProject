@@ -24,3 +24,4 @@ C:\Users\emirc\source\repos\Rent A Car Recap Project\Rent A Car Project\Entities
 C:\Users\emirc\source\repos\Rent A Car Recap Project\Rent A Car Project\Entities\bin\Debug\net7.0\Core.pdb
 C:\Users\emirc\source\repos\Rent A Car Recap Project\Rent A Car Project\Entities\obj\Debug\net7.0\Entities.csproj.AssemblyReference.cache
 C:\Users\emirc\source\repos\Rent A Car Recap Project\Rent A Car Project\Entities\obj\Debug\net7.0\Entities.csproj.CopyComplete
+C:\Users\emirc\source\repos\Rent A Car Recap Project\Rent A Car Project\Entities\obj\Debug\net7.0\Entities.sourcelink.json

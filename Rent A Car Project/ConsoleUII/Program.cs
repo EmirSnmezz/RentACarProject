@@ -7,9 +7,9 @@ using Microsoft.IdentityModel.Tokens;
 
 namespace ConsoleUII
 {
-    internal class Program
+    public class Program
     {
-        static void Main(string[] args)
+        public static void Main(string[] args)
         {
             //CarManager carManager = new CarManager(new InMemoryCarDal());
             //Console.WriteLine("-------------------------------------------- ARABALAR / CARS -------------------------------------------------");
@@ -64,8 +64,11 @@ namespace ConsoleUII
             //        );
             //}
 
+            var Result = carManager.CarDetail();
+
+
             Console.WriteLine("******************************************* FİRMAYA AİT ARAÇ BİLGİLERİ ****************************************** ");
-            foreach (var car in carManager.CarDetail())
+            foreach (var car in Result.Data)
             {
                 Console.WriteLine
                     ("--------------------------------" +
@@ -73,17 +76,23 @@ namespace ConsoleUII
                     "Araç Rengi :{1}\n" +
                     "Araç Markası :{2}\n" +
                     "Araç Günlük Ücreti :{3}\n" +
-                    "--------------------------------", 
-                    car.CarName, 
+                    "--------------------------------",
+                    car.CarName,
                     car.ColorName,
-                    car.BrandName, 
-                    car.DailyPrice
+                    car.BrandName,
+                    car.DailyPrice,
+                    Result.Message
                     );
-          
             }
-
-
-
+            
+            Console.WriteLine(Result.Message);
         }
+
+
+        
+            
+           
+
+        
     }
 }

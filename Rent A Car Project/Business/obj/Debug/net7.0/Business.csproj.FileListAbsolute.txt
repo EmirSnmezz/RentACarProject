@@ -34,3 +34,4 @@ C:\Users\emirc\source\repos\Rent A Car Recap Project\Rent A Car Project\Business
 C:\Users\emirc\source\repos\Rent A Car Recap Project\Rent A Car Project\Business\obj\Debug\net7.0\ref\Business.dll
 C:\Users\emirc\source\repos\Rent A Car Recap Project\Rent A Car Project\Business\bin\Debug\net7.0\Core.dll
 C:\Users\emirc\source\repos\Rent A Car Recap Project\Rent A Car Project\Business\bin\Debug\net7.0\Core.pdb
+C:\Users\emirc\source\repos\Rent A Car Recap Project\Rent A Car Project\Business\obj\Debug\net7.0\Business.sourcelink.json

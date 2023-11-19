@@ -30,3 +30,4 @@ C:\Users\emirc\source\repos\Rent A Car Recap Project\Rent A Car Project\Data Acc
 C:\Users\emirc\source\repos\Rent A Car Recap Project\Rent A Car Project\Data Access\obj\Debug\net7.0\ref\Data Access.dll
 C:\Users\emirc\source\repos\Rent A Car Recap Project\Rent A Car Project\Data Access\bin\Debug\net7.0\Core.dll
 C:\Users\emirc\source\repos\Rent A Car Recap Project\Rent A Car Project\Data Access\bin\Debug\net7.0\Core.pdb
+C:\Users\emirc\source\repos\Rent A Car Recap Project\Rent A Car Project\Data Access\obj\Debug\net7.0\Data Access.sourcelink.json

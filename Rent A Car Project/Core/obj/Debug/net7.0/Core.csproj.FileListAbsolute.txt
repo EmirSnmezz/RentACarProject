@@ -10,3 +10,4 @@ C:\Users\emirc\source\repos\Rent A Car Recap Project\Rent A Car Project\Core\obj
 C:\Users\emirc\source\repos\Rent A Car Recap Project\Rent A Car Project\Core\obj\Debug\net7.0\refint\Core.dll
 C:\Users\emirc\source\repos\Rent A Car Recap Project\Rent A Car Project\Core\obj\Debug\net7.0\Core.pdb
 C:\Users\emirc\source\repos\Rent A Car Recap Project\Rent A Car Project\Core\obj\Debug\net7.0\ref\Core.dll
+C:\Users\emirc\source\repos\Rent A Car Recap Project\Rent A Car Project\Core\obj\Debug\net7.0\Core.sourcelink.json

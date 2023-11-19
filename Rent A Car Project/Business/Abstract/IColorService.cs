@@ -1,4 +1,5 @@
-﻿using Entities.Concrete;
+﻿using Data_Access.Abstarct;
+using Entities.Concrete;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -7,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace Business.Abstract
 {
-    public interface IColorService
+    public interface IColorService : IColorDal
     {
         List<Color> GetAll();
     }
