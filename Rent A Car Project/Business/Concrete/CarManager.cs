@@ -9,6 +9,7 @@ using Entities.Concrete;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -54,7 +55,7 @@ namespace Business.Concrete
             return new ErrorResult(Messages.carDeletedErrorMessage);
         }
 
-        public IDataResult<List<Car>> GeByBrandId(int BrandId)
+        public IDataResult<List<Car>> GetByBrandId(int BrandId)
         {
             if (_carDal.GetByBrandId(BrandId).Count > 0)
             {
@@ -65,11 +66,21 @@ namespace Business.Concrete
 
         }
 
-        public IDataResult<List<Car>> GetAll()
+        public IDataResult<List<Car>> GetAll(Expression <Func<Car,bool>> filter)
         {
-            if (_carDal.GetAll().Count > 0)
+            if(filter == null)
             {
-                return new SuccessDataResult<List<Car>>(_carDal.GetAll(), Messages.carsListedSuccesMessage);
+                if (_carDal.GetAll().Count > 0)
+                {
+                    return new SuccessDataResult<List<Car>>(_carDal.GetAll(), Messages.carsListedSuccesMessage);
+                }
+
+                return new ErrorDataResult<List<Car>>(_carDal.GetAll(), Messages.carsListedSuccesMessage);
+            }
+
+            if (_carDal.GetAll(filter).Count > 0)
+            {
+                return new SuccessDataResult<List<Car>>(_carDal.GetAll(filter), Messages.carsListedSuccesMessage);
             }
 
             return new ErrorDataResult<List<Car>>(_carDal.GetAll(), Messages.carsListedSuccesMessage);
