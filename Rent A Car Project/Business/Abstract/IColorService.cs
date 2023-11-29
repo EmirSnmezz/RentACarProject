@@ -19,10 +19,6 @@ namespace Business.Abstract
         IResult Add(Color entity);
         IResult Delete(Color entity);
         IResult Update(Color entity);
-
-
-
-
-
+    
     }
 }

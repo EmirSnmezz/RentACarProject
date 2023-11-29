@@ -43,10 +43,11 @@ namespace Business.Concrete
 
         public IResult Delete(Car car)
         {
-            if (_carDal.GetAll().Where(p => p.ID == car.ID).Count() > 0)
+            _carDal.Delete(car);
+            if (_carDal.GetAll().Where(p => p.ID == car.ID).Count() == 0)
             {
 
-                _carDal.Delete(car);
+               
 
                 return new SuccessResult(Messages.carDeletedSuccesMessage);
 
@@ -66,7 +67,7 @@ namespace Business.Concrete
 
         }
 
-        public IDataResult<List<Car>> GetAll(Expression <Func<Car,bool>> filter)
+        public IDataResult<List<Car>> GetAll(Expression <Func<Car,bool>> filter=null)
         {
             if(filter == null)
             {

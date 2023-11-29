@@ -22,27 +22,24 @@ namespace Data_Access.Concrete.Entity_Framework
 
         public List<CarDetailDto> CarDetail()
         {
-            var result = from c in _context.Car
-                        join b in _context.Brand
-                        on c.BrandId equals b.Id
-                        join cl in _context.Color
-                        on c.ColorId equals cl.Id                       
-                        select new CarDetailDto { CarName = c.Description, BrandName = b.BrandName, ColorName = cl.ColorName, DailyPrice = c.DailyPrice };
+            var result = from c in _context.Cars
+                         join b in _context.Brands
+                         on c.BrandId equals b.Id
+                         join cl in _context.Colors
+                         on c.ColorId equals cl.Id
+                         select new CarDetailDto { CarName = c.Description, BrandName = b.BrandName, ColorName = cl.ColorName, DailyPrice = c.DailyPrice };
 
             return result.ToList();
-                        
-                       
-            }
-
+        }
         public List<Car> GetByBrandId(int brandId)
         {
-            var getByBrandId = _context.Car.Where(p => p.BrandId == brandId).ToList();
+            var getByBrandId = _context.Cars.Where(p => p.BrandId == brandId).ToList();
             return getByBrandId;
         }
 
         public List<Car> GetByColorId(int ColorId)
         {
-            var getByColorId = _context.Car.Where(p => p.ColorId == ColorId).ToList();
+            var getByColorId = _context.Cars.Where(p => p.ColorId == ColorId).ToList();
             return getByColorId;
         }
     }

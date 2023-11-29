@@ -13,6 +13,7 @@ namespace Data_Access.Concrete.Entity_Framework
 {
     public class EfBrandDal : EfEntityRepositoryBase<Brand, RentACarContext>, IBrandDal
     {
+        RentACarContext _context;
         public EfBrandDal(RentACarContext context) : base(context)
         {
         }

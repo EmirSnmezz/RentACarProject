@@ -12,7 +12,7 @@ namespace Business.Abstract
 {
     public interface ICarService
     {
-       IDataResult<List<Car>> GetAll(Expression <Func<Car,bool>> filter);
+       IDataResult<List<Car>> GetAll(Expression <Func<Car,bool>> filter = null);
         IResult Add(Car car );
         IResult Delete(Car car);
         IDataResult<List<Car>> GetByColorId(int colorId);

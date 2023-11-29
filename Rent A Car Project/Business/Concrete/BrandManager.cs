@@ -1,5 +1,10 @@
 ﻿
 using Business.Abstract;
+using Business.Constants;
+using Core.Utilities.Results.DataResult.Abstract;
+using Core.Utilities.Results.DataResult.Concrete;
+using Core.Utilities.Results.Result.Abstract;
+using Core.Utilities.Results.Result.Concrete;
 using Data_Access.Abstarct;
 using Entities.Concrete;
 using System;
@@ -19,29 +24,50 @@ namespace Business.Concrete
             _brandDal =  brand;
         }
 
-        public void Add(Brand entity)
+        public IResult Add(Brand brand)
         {
-            _brandDal.Add(entity);
+            _brandDal.Add(brand);
+           if(_brandDal.GetAll(p => p.Id == brand.Id).Any())
+            {
+                return new SuccessResult(Messages.brandAddedSuccessMessage);
+            }
+
+            return new ErrorResult(Messages.brandAddedErrorMessage);
         }
 
-        public void Delete(Brand entity)
+        public IResult Delete(Brand brand)
         {
-            _brandDal.Delete(entity);
+            _brandDal.Delete(brand);
+            if(! _brandDal.GetAll(p=> p.Id == brand.Id).Any())
+            {
+                return new SuccessResult(Messages.brandDeletedSuccessMessage);
+            }
+
+            return new ErrorResult(Messages.brandDeletedErrorMessage);
         }
 
-        public List<Brand> GetAll()
+        public IDataResult<List<Brand>> GetAll(Expression<Func<Brand, bool>> filter = null)
         {
-            return _brandDal.GetAll();
+            if(filter == null)
+            {
+               if(_brandDal.GetAll().Count() > 0)
+                {
+                    return new SuccessDataResult<List<Brand>>(_brandDal.GetAll(), Messages.brandsListedSuccessMessage);
+                }
+                return new ErrorDataResult<List<Brand>>(null, Messages.brandsListedErrorMessage);
+            }
+
+            if(_brandDal.GetAll(filter).Count() > 0)
+            {
+                return new SuccessDataResult<List<Brand>>(_brandDal.GetAll(filter), Messages.brandsListedSuccessMessage);
+            }
+
+            return new ErrorDataResult<List<Brand>>(null, Messages.brandsListedErrorMessage);
         }
 
-        public List<Brand> GetAll(Expression<Func<Brand, bool>> filter = null)
+        public IDataResult<Brand> Update(Brand brand)
         {
-            throw new NotImplementedException();
-        }
-
-        public void Update(Brand entity)
-        {
-            _brandDal.Update(entity);
+            return null;
         }
     }
 }

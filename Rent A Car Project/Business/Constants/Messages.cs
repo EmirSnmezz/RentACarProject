@@ -51,6 +51,8 @@ namespace Business.Constants
 
         public static string brandDeletedSuccessMessage = "Marka Sistemden Başarıyla Silindi...";
 
+        public static string brandDeletedErrorMessage = "Marka Sistemden Silinirken Hata!";
+
         public static string brandsListedSuccessMessage = "Marka Listeleme İşlemi Başarılı...";
 
         public static string brandsListedErrorMessage = "Markalar Listelenirken Hata!";
@@ -86,6 +88,11 @@ namespace Business.Constants
         public static string usersUpdatedErrorMessage = "Kullanıcı Güncellenirken Hata!";
         
         public static string usersExistErrorMessage = "Bu Kullanıcı Zaten Var ... ";
+
+        public static string rentalInfosListedSuccessMessage = "Araç Kiralama Bilgileri Listelendi ....";
+
+        public static string rentalInfosListedErrorMessage = "Listelenecek Araç Kiralama Bilgisi Bulunamadı!";
+
 
     }
 }
