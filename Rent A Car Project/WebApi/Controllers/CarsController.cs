@@ -52,7 +52,7 @@ namespace WebApi.Controllers
 
             if(result.IsSuccess == false) 
             {
-                return BadRequest();
+                return BadRequest(result.Message);
             }
             return Ok(result);
         }
