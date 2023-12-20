@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "2c4iUYFBdAHKTWvVnbpvCIpT+OFhRIbHxlYQd19PWkEfMZQchyLhRm93P7XcifLEPScvoJ1UaSv5ZSq3omQ3XQ==",
+  "dgSpecHash": "2Nn4ljD//SeUh5OeiyRBriaAtWWR3IW3ntH/siosYM1xkqb+0U4VEwefyKXq6tK89MIjVQ1A645vy/h3EwmJ4Q==",
   "success": true,
   "projectFilePath": "C:\\Users\\emirc\\source\\repos\\Rent A Car Recap Project\\Rent A Car Project\\Business\\Business.csproj",
   "expectedPackageFiles": [
@@ -9,6 +9,7 @@
     "C:\\Users\\emirc\\.nuget\\packages\\azure.core\\1.25.0\\azure.core.1.25.0.nupkg.sha512",
     "C:\\Users\\emirc\\.nuget\\packages\\azure.identity\\1.7.0\\azure.identity.1.7.0.nupkg.sha512",
     "C:\\Users\\emirc\\.nuget\\packages\\castle.core\\5.1.1\\castle.core.5.1.1.nupkg.sha512",
+    "C:\\Users\\emirc\\.nuget\\packages\\fluentvalidation\\11.8.1\\fluentvalidation.11.8.1.nupkg.sha512",
     "C:\\Users\\emirc\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\1.1.1\\microsoft.bcl.asyncinterfaces.1.1.1.nupkg.sha512",
     "C:\\Users\\emirc\\.nuget\\packages\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",
     "C:\\Users\\emirc\\.nuget\\packages\\microsoft.data.sqlclient\\5.1.1\\microsoft.data.sqlclient.5.1.1.nupkg.sha512",

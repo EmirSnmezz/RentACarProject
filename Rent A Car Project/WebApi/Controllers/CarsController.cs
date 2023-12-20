@@ -1,4 +1,5 @@
 ﻿using Business.Abstract;
+using Core.CrossCuttingConcerns;
 using Entities.Concrete;
 using Microsoft.AspNetCore.Mvc;
 

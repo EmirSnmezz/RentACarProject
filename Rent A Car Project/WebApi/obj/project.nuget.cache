@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "R/Y4zVhP9SXpjIay1tQ4gmgylynLmOPNa3PZmOALK5hz3PYD7EkjNcM1lUbAbBdSI++nRosxUuOJVI5ik9pzrw==",
+  "dgSpecHash": "MdtVgCijTFdxNLRTzD3J5i3hiy+wbBMhsvK9g/6GkPXtUX43H/Jp7g8wuBdW7IZ1Lga5pcyy+at93RoFLDvaOg==",
   "success": true,
   "projectFilePath": "C:\\Users\\emirc\\source\\repos\\Rent A Car Recap Project\\Rent A Car Project\\WebApi\\WebApi.csproj",
   "expectedPackageFiles": [
@@ -10,6 +10,7 @@
     "C:\\Users\\emirc\\.nuget\\packages\\azure.core\\1.25.0\\azure.core.1.25.0.nupkg.sha512",
     "C:\\Users\\emirc\\.nuget\\packages\\azure.identity\\1.7.0\\azure.identity.1.7.0.nupkg.sha512",
     "C:\\Users\\emirc\\.nuget\\packages\\castle.core\\5.1.1\\castle.core.5.1.1.nupkg.sha512",
+    "C:\\Users\\emirc\\.nuget\\packages\\fluentvalidation\\11.8.1\\fluentvalidation.11.8.1.nupkg.sha512",
     "C:\\Users\\emirc\\.nuget\\packages\\microsoft.aspnetcore.openapi\\7.0.13\\microsoft.aspnetcore.openapi.7.0.13.nupkg.sha512",
     "C:\\Users\\emirc\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\1.1.1\\microsoft.bcl.asyncinterfaces.1.1.1.nupkg.sha512",
     "C:\\Users\\emirc\\.nuget\\packages\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",
