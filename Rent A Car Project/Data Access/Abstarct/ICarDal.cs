@@ -13,6 +13,7 @@ namespace Data_Access.Abstarct
     {
         List<Car> GetByBrandId (int brandId);
         List<Car> GetByColorId (int ColorId);
+        Car GetById (int Id);
         List<CarDetailDto> CarDetail();
     }
 }

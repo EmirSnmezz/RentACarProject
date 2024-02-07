@@ -1,7 +1,5 @@
 ﻿using Business.Abstract;
 using Business.Constants;
-using Business.ValidationRules.FluentValidation;
-using Core.CrossCuttingConcerns;
 using Core.Utilities.Results.DataResult.Abstract;
 using Core.Utilities.Results.DataResult.Concrete;
 using Core.Utilities.Results.Result.Abstract;
@@ -26,9 +24,10 @@ namespace Business.Concrete
             _carDal = carDal;
         }
 
+        //[ValidationAspect(typeof(CarValidator))]
         public IResult Add(Car car)
         {
-            ValidationTool.Validate(new CarValidator(), car);
+            //ValidationTool.Validate(new CarValidator(), car); Bu Yapı Kod Karmaşası, DRY Prensibi ve SOLID Yazılım Geliştirme Prensibinin S Harfini İhlal Etmemek Adına Aspect'e Çevrilmiştir.
 
             _carDal.Add(car);
 
@@ -47,24 +46,20 @@ namespace Business.Concrete
             _carDal.Delete(car);
             if (_carDal.GetAll().Where(p => p.ID == car.ID).Count() == 0)
             {
-
-               
-
                 return new SuccessResult(Messages.carDeletedSuccesMessage);
-
             }
 
             return new ErrorResult(Messages.carDeletedErrorMessage);
         }
 
-        public IDataResult<List<Car>> GetByBrandId(int BrandId)
+        public IDataResult<List<Car>> GetByBrandId(int brandId)
         {
-            if (_carDal.GetByBrandId(BrandId).Count > 0)
+            if (_carDal.GetByBrandId(brandId).Count > 0)
             {
-                return new SuccessDataResult<List<Car>>(_carDal.GetByBrandId(BrandId), Messages.carsListedSuccesMessage);
+                return new SuccessDataResult<List<Car>>(_carDal.GetByBrandId(brandId), Messages.carsListedSuccesMessage);
             }
 
-            return new ErrorDataResult<List<Car>>(_carDal.GetByBrandId(BrandId), Messages.carsListedErrorMessage);
+            return new ErrorDataResult<List<Car>>(_carDal.GetByBrandId(brandId), Messages.carsListedErrorMessage);
 
         }
 
@@ -97,5 +92,40 @@ namespace Business.Concrete
 
             return new ErrorDataResult<List<Car>>(_carDal.GetByColorId(ColorId), Messages.carsListedErrorMessage);
         }
+
+        public IResult Update(Car car)
+        {
+            try
+            {
+                if (car != null)
+                {
+                    int carId = car.ID;
+                    var gettingcar = _carDal.GetAll(x=> x.ID == carId).First();
+                    if (gettingcar == null) 
+                    {
+                        return new ErrorResult(Messages.carUpdatedErrorMessage);
+                    }
+                    gettingcar.Description = car.Description;
+                    gettingcar.DailyPrice = car.DailyPrice;
+                    gettingcar.BrandId = car.BrandId;
+                    gettingcar.ColorId = car.ColorId;
+
+                    _carDal.Update(gettingcar);
+
+                    return new SuccessResult(Messages.carUpdatedSuccessMessage + "/" + gettingcar.ID);
+                }
+            }catch (Exception ex) 
+            {
+                return new ErrorResult(ex.Message);
+            }
+
+            return new ErrorResult(Messages.carUpdatedErrorMessage);
+        }
+
+        public IDataResult<Car> GetById(int carID)
+        {
+            throw new NotImplementedException();
+        }
+
     }
 }

@@ -1,5 +1,4 @@
 ﻿using Business.Abstract;
-using Core.CrossCuttingConcerns;
 using Entities.Concrete;
 using Microsoft.AspNetCore.Mvc;
 
@@ -59,7 +58,7 @@ namespace WebApi.Controllers
         }
 
 
-        [HttpGet("getbycolorid")]
+        [HttpGet("getbycolorid/{colorId}")]
         public IActionResult GetByColorId(int colorId)
         {
            var result = _carService.GetByColorId(colorId);
@@ -73,7 +72,7 @@ namespace WebApi.Controllers
         }
 
 
-        [HttpGet("getbybrandid")]
+        [HttpGet("getbybrandid/{brandId}")]
         public IActionResult GetByBrandId(int brandId)
         {
             var result = _carService.GetByBrandId(brandId);
@@ -97,6 +96,19 @@ namespace WebApi.Controllers
             }
 
             return Ok(result);
+        }
+
+        [HttpPost("update")]
+        public IActionResult Update(Car car)
+        {
+            var result = _carService.Update(car);
+            if(result.IsSuccess == false) 
+            {
+                return BadRequest();
+            }
+
+            return Ok(result);
+
         }
     }
 }

@@ -1178,6 +1178,7 @@
         "dependencies": {
           "Autofac": "7.1.0",
           "Autofac.Extras.DynamicProxy": "7.1.0",
+          "Castle.Core": "5.1.1",
           "Data Access": "1.0.0",
           "Entities": "1.0.0",
           "FluentValidation": "11.8.1"
@@ -3479,7 +3480,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.101\\RuntimeIdentifierGraph.json"
       }
     }
   }

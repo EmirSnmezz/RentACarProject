@@ -42,5 +42,11 @@ namespace Data_Access.Concrete.Entity_Framework
             var getByColorId = _context.Cars.Where(p => p.ColorId == ColorId).ToList();
             return getByColorId;
         }
+
+        public Car GetById(int Id)
+        {
+            var car = _context.Cars.FirstOrDefault(x => x.ID == Id);
+            return car;
+        }
     }
 }

@@ -3,7 +3,6 @@ using Autofac;
 using Autofac.Extensions.DependencyInjection;
 using Business.Abstract;
 using Business.Concrete;
-using Business.DependencyResolvers.Autofac;
 using Data_Access.Abstarct;
 using Data_Access.Concrete.Entity_Framework;
 using Microsoft.EntityFrameworkCore;
@@ -17,19 +16,13 @@ namespace WebApi
             var builder = WebApplication.CreateBuilder(args);
 
             // Add services to the container.
-
-           builder.Host
-                .UseServiceProviderFactory(new AutofacServiceProviderFactory())
-                .ConfigureContainer<ContainerBuilder>( builder =>
-                builder.RegisterModule(new AutofacBusinessModule()));
-
             builder.Services.AddControllers();
             // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddSwaggerGen();
-            //builder.Services.AddSingleton<ICarService, CarManager>();
-            //builder.Services.AddSingleton<ICarDal, efCarDal>();
-            //builder.Services.AddSingleton<RentACarContext, RentACarContext>();
+            builder.Services.AddSingleton<ICarService, CarManager>();
+            builder.Services.AddSingleton<ICarDal, efCarDal>();
+            builder.Services.AddSingleton<RentACarContext, RentACarContext>();
             //builder.Services.AddSingleton<IColorService, ColorManager>();
             //builder.Services.AddSingleton<IColorDal, efColorDal>();
             //builder.Services.AddSingleton<IBrandService, BrandManager>();

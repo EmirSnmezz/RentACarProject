@@ -80,6 +80,11 @@ namespace Data_Access.Concrete.InMemory
             return myCar.ID;
         }
 
+        public Car GetById(int Id)
+        {
+            throw new NotImplementedException();
+        }
+
         public Car Update(Car car)
         {
 
