@@ -1,5 +1,7 @@
 ﻿using Business.Abstract;
 using Business.Constants;
+using Business.Validation.FluentValidation;
+using Core.Aspects.Autofac.Validation;
 using Core.Utilities.Results.DataResult.Abstract;
 using Core.Utilities.Results.DataResult.Concrete;
 using Core.Utilities.Results.Result.Abstract;
@@ -24,7 +26,7 @@ namespace Business.Concrete
             _carDal = carDal;
         }
 
-        //[ValidationAspect(typeof(CarValidator))]
+        [ValidationAspect(typeof(CarValidator))]
         public IResult Add(Car car)
         {
             //ValidationTool.Validate(new CarValidator(), car); Bu Yapı Kod Karmaşası, DRY Prensibi ve SOLID Yazılım Geliştirme Prensibinin S Harfini İhlal Etmemek Adına Aspect'e Çevrilmiştir.
